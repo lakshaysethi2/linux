@@ -17,3 +17,21 @@ install yay
 ```
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 ```
+
+
+touch pad fix 
+```
+sudo pacman -S xorg-xinput
+```
+```
+xinput set-prop "$(xinput list --id-only "$(xinput list | grep -i touchpad | head -n1 | sed 's/.*↳ //;s/[[:space:]]\+id=.*//')")" "libinput Tapping Enabled" 1
+```
+above is basically touchpad id extract eg 12: 
+```
+xinput set-prop 12 "libinput Tapping Enabled" 1
+```
+with output if 12 from
+```
+xinput list
+```
+
