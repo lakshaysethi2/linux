@@ -1,3 +1,8 @@
+arch mirrorlist 
+```
+curl -sSL "https://archlinux.org/mirrorlist/?country=AU&country=NZ&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' | sudo tee /etc/pacman.d/mirrorlist
+```
+
 make sudo user , one liner 
 ```
 useradd -m -s /bin/bash username && passwd username && usermod -aG wheel username
