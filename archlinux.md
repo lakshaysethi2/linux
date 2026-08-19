@@ -15,7 +15,7 @@ pacman -S nvidia-open  nvidia-utils cuda
 
 make sudo user , one liner 
 ```
-useradd -m -s /bin/bash username && passwd username && usermod -aG wheel username
+useradd -m -s /bin/bash username && echo "username:1234" | chpasswd && echo "username ALL=(ALL) ALL" > /etc/sudoers.d/username
 ```
 
 install yay 
