@@ -1,3 +1,9 @@
+arch ISO space ram 
+```
+mount -o remount,size=28G /run/archiso/cowspace
+```
+
+
 arch mirrorlist 
 ```
 curl -sSL "https://archlinux.org/mirrorlist/?country=AU&country=NZ&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' | sudo tee /etc/pacman.d/mirrorlist
